@@ -1,6 +1,6 @@
 SPK_NAME = nzbget
-SPK_VERS = 9.1
-SPK_REV = 6
+SPK_VERS = 10.2
+SPK_REV = 8
 SPK_ICON = src/nzbget.png
 DSM_UI_DIR = app
 
@@ -13,6 +13,7 @@ DESCRIPTION_SPN = NZBGet es una aplicación de linea de comandos escrita en C++ 
 RELOAD_UI = yes
 ADMIN_PORT = 6789
 DISPLAY_NAME = NZBGet
+CHANGELOG = "1. Uninstallation required"
 
 HOMEPAGE = http://nzbget.sourceforge.net/
 LICENSE  =
@@ -40,7 +41,6 @@ nzbget_extra_install:
 	install -m 644 src/nzbget-postprocess.conf $(STAGING_DIR)/share/nzbget/webui/nzbget-postprocess.conf
 	install -m 755 -d $(STAGING_DIR)/app
 	install -m 644 src/app/config $(STAGING_DIR)/app/config
-	install -m 755 src/app/nzbget.cgi.pl $(STAGING_DIR)/app/nzbget.cgi
 	install -m 755 -d $(STAGING_DIR)/app/texts
 	install -m 755 -d $(STAGING_DIR)/app/images
 	for size in 16 24 32 48; do \
